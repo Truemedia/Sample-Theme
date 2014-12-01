@@ -1,18 +1,19 @@
 /**
- * Settings
- *
- * Global variables, site-wide settings, config switches, etc.
- */
-@import "bower_components/inuit-defaults/settings.defaults";
-@import "settings/_palette";
-
-/**
  * Tools
  *
  * Site-wide mixins and functions.
  */
 @import "bower_components/inuit-functions/tools.functions";
 @import "bower_components/inuit-mixins/tools.mixins";
+@import "tools/_mixer";
+
+/**
+ * Settings
+ *
+ * Global variables, site-wide settings, config switches, etc.
+ */
+@import "bower_components/inuit-defaults/settings.defaults";
+@import "settings/_scheme";
 
 /**
  * Generic
@@ -27,7 +28,7 @@
  *
  * Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
  */
-@import "bower_components/inuit-page/base.page"
+@import "bower_components/inuit-page/base.page";
 
 /**
  * Objects
@@ -40,6 +41,7 @@
  *
  * Discrete, complete chunks of UI (e.g. .carousel {}).
  */
+ @import "components/_header";
 
 /**
  * Trumps

@@ -1,0 +1,43 @@
+/**
+ * Color Scheme
+ *
+ * This is how your colors should be implemented in rest of application, to allow abstraction on hierachy rather than values
+ */
+@import "_palette.scss";
+
+$base-color-scheme:
+(
+  primary: map-get($base-palette, blue),
+  secondary: map-get($base-palette, purple),
+  tertiary: map-get($base-palette, grey),
+  quaternary: map-get($base-palette, blue-green),
+  quinary: map-get($base-palette, green),
+  senary: map-get($base-palette, brown),
+  septenary: map-get($base-palette, red),
+  octonary: map-get($base-palette, yellow),
+  nonary: map-get($base-palette, orange),
+  denary: map-get($base-palette, pink-purple)
+);
+
+$primary-color: map-get($base-color-scheme, primary) !default;
+$secondary-color: map-get($base-color-scheme, secondary) !default;
+$tertiary-color: map-get($base-color-scheme, tertiary) !default;
+$quaternary-color: map-get($base-color-scheme, quaternary) !default;
+$quinary-color: map-get($base-color-scheme, quinary) !default;
+$senary-color: map-get($base-color-scheme, senary) !default;
+$septenary-color: map-get($base-color-scheme, septenary) !default;
+$octonary-color: map-get($base-color-scheme, octonary) !default;
+$nonary-color: map-get($base-color-scheme, nonary) !default;
+$denary-color: map-get($base-color-scheme, denary) !default;
+
+// TODO: Make BEM variable creator e.g $primary-color__dim--dark: get-tone($primary-color, dim, dark);
+$primary-color__bright--darkest: get-tone($primary-color, bright, darkest);
+$secondary-color__dim--light: get-tone($secondary-color, dim, light);
+$tertiary-color__dim--light: get-tone($tertiary-color, dim, light);
+$quaternary-color__bright--darker: get-tone($quaternary-color, bright, darker);
+$quinary-color__dim--light: get-tone($quinary-color, dim, light);
+$senary-color-color__dim--light: get-tone($senary-color, dim, light);
+$septenary-color__bright--dark: get-tone($septenary-color, bright, dark);
+$octonary-color__dim--light: get-tone($octonary-color, dim, light);
+$nonary-color__dim--light: get-tone($nonary-color, dim, light);
+$denary-color__dim--light: get-tone($denary-color, dim, light);

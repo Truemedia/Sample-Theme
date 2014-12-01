@@ -1,0 +1,17 @@
+// /* Get a color array containing variations and tones */
+// @function palette($palette, $color)
+// {
+//   @return map-get($palette, $color);
+// }
+
+// Fetch a color representation using hierachy from a color scheme
+// @function scheme($color-scheme, $hierachy)
+// {
+//   @return map-get($color-scheme, $hierachy);
+// }
+
+/* Get color object for color based on name, variation, and tone */
+@function get-tone($color, $variation, $tone: 'base')
+{
+  @return map-get(map-get($color, $variation), $tone);
+}

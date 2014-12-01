@@ -1,0 +1,22 @@
+.test-1
+{
+  color: $primary-color__bright--darkest;
+  background-color: $secondary-color__dim--light;
+  border: 5px solid $tertiary-color__dim--light;
+}
+.test-2
+{
+  color: $quaternary-color__bright--darker;
+  background-color: $quinary-color__dim--light;
+  border: 5px solid $senary-color-color__dim--light;
+}
+.test-3
+{
+  color: $septenary-color__bright--dark;
+  background-color: $octonary-color__dim--light;
+  border: 5px solid $nonary-color__dim--light;
+}
+body
+{
+  background-color: $denary-color__dim--light;
+}
