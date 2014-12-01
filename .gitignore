@@ -1,0 +1,18 @@
+# package management
+bower_components/
+node_modules/
+
+# caching
+.sass-cache/
+
+# compiled files
+/favicon.ico
+/app_icon.png
+/main.css
+/main.css.map
+/style.min.css
+/script.min.js
+/bundle.js
+
+# meta files
+.editorconfig

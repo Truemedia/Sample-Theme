@@ -10,7 +10,9 @@
     "test",
     "tests"
   ],
+  "main": "main.scss",
   "dependencies": {
-    "colorly": "~0.0.3"
+    "colorly": "~0.1.0",
+    "inuit-starter-kit": "~0.2.8"
   }
 }
