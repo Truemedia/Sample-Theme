@@ -3,8 +3,8 @@
  *
  * Site-wide mixins and functions.
  */
-@import "bower_components/inuit-functions/tools.functions";
-@import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/bourbon/dist/_bourbon";
+@import "bower_components/neat/app/assets/stylesheets/_neat";
 @import "tools/_mixer";
 
 /**
@@ -12,7 +12,7 @@
  *
  * Global variables, site-wide settings, config switches, etc.
  */
-@import "bower_components/inuit-defaults/settings.defaults";
+@import "bower_components/inuit-defaults/_settings.defaults";
 @import "settings/_scheme";
 
 /**
@@ -20,15 +20,15 @@
  *
  * Low-specificity, far-reaching rulesets (e.g. resets).
  */
-@import "bower_components/inuit-normalize/generic.normalize";
-@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-normalize/_generic.normalize";
+@import "bower_components/inuit-box-sizing/_generic.box-sizing";
 
 /**
  * Base
  *
  * Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
  */
-@import "bower_components/inuit-page/base.page";
+@import "bower_components/inuit-page/_base.page";
 
 /**
  * Objects
@@ -41,10 +41,11 @@
  *
  * Discrete, complete chunks of UI (e.g. .carousel {}).
  */
- @import "components/_header";
+@import "components/_header";
 
 /**
  * Trumps
  *
  * High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
  */
+@import "bower_components/inuit-clearfix/_trumps.clearfix.scss";

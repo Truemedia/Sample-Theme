@@ -13,6 +13,12 @@
   "main": "main.scss",
   "dependencies": {
     "colorly": "~0.1.0",
-    "inuit-starter-kit": "~0.2.8"
+    "bourbon": "~4.0.2",
+    "neat": "~1.7.0",
+    "refills": "~0.0.2",
+    "inuit-normalize": "~3.0.1",
+    "inuit-box-sizing": "~0.2.0",
+    "inuit-page": "~0.2.1",
+    "inuit-clearfix": "~0.2.1"
   }
 }
