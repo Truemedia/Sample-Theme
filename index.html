@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<link rel="stylesheet" href="style.min.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" href="app_icon.png"/>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -39,19 +40,19 @@
 				    </div>
 				    <div class="social-links">
 				    	<div class="social-links__link">
-				    		<i class="icon-facebook"></i> F
+				    		<i class="fa fa-facebook"></i> F
 				    		<a href="http://www.facebook.com">@{{ Person.[@additional].facebook }}</a>
 				    	</div>
 				    	<div class="social-links__link">
-				    		<i class="icon-twitter"></i> T
+				    		<i class="fa fa-twitter"></i> T
 				    		<a href="http://www.twitter.com">@{{ Person.[@additional].twitter }}</a>
 				    	</div>
 				    	<div class="social-links__link">
-				    		<i class="icon-phone"></i> P
+				    		<i class="fa fa-phone"></i> P
 				    		<a href="tel:{{ Person.telephone }}" class="person__telephone" itemprop="telephone">{{ Person.telephone }}</a>
 				    	</div>
 				    	<div class="social-links__link">
-				    		<i class="icon-email"></i> E
+				    		<i class="fa fa-envelope"></i> E
 				    		<a href="mailto:{{ Person.email }}" class="person__email" itemprop="email">{{ Person.email }}</a>
 				    	</div>
 				    </div>

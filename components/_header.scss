@@ -80,6 +80,14 @@
   // Element unique rules
   &__link {
     @include span(1);
-    font-size: 0.5em;
+    font-size: 0.9em;
+    .fa {
+      color: $tertiary-color__bright--light;
+    }
+    a {
+      &:link, &:visited, &:hover, &:active {
+        color: $tertiary-color__bright--light;
+      }
+    }
   }
 }
