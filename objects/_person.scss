@@ -1,0 +1,36 @@
+// Unique rules
+.person {
+    &__name {
+        
+    }
+    &__image {
+        border: 4px solid $tertiary-color__dim--light;
+        height: 50px;
+        float: left;
+    }
+    &__job-title {
+
+    }
+    &__postal-address {
+
+    }
+    &__telephone {
+
+    }
+    &__email {
+
+    }
+    &__url {
+
+    }
+    &__colleague {
+
+    }
+}
+
+// Shared rules
+.person {
+    &__name, &__job-title {
+        font-size: 1.4em;
+    }
+}

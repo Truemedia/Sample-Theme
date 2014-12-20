@@ -11,7 +11,9 @@ node_modules/
 /main.css
 /main.css.map
 /style.min.css
+/style.min.css.map
 /script.min.js
+/script.min.js.map
 /bundle.js
 
 # meta files

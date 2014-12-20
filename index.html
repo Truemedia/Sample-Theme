@@ -4,15 +4,64 @@
 		<link rel="stylesheet" href="style.min.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" href="app_icon.png"/>
-		<script type="text/javascript" src="bundle.js"></script>		
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function()
+			{
+				$.get('data/person.json', function(Person)
+				{
+					var data = {
+						Person: Person
+					};
+					var tpl = Handlebars.compile( $('body').html() );
+					$('body').html( tpl(data) );
+				})
+			});
+		</script>
 		<title>Sample Theme</title>
 	</head>
 
 	<body id="layout">
-		<header class="header">
-			<div class="header__item">Wade Penistone</div>
-			<div class="header__item">Wade Penistone</div>
-			<div class="header__item">Wade Penistone</div>
-		</header>
+		<div class="content">
+			<div class="content__item">
+				<div class="person ui" itemscope itemtype="http://schema.org/Person">
+					<div class="ui__overview">
+						<img class="person__image" src="{{ Person.image }}" itemprop="image" alt="Photo of {{ Person.name }}" />
+						<p class="overview__main">
+					     	<span class="person__name" itemprop="name">{{ Person.name }}</span>
+					     	 - 
+					     	<span class="person__job-title" itemprop="jobTitle">{{ Person.job_title }}</span>
+					    </p>
+			     	</div>
+			    	<div class="ui__description">
+			    		<p>{{ Person.[@additional].bio }}</p>
+				    </div>
+				    <div class="social-links">
+				    	<div class="social-links__link">
+				    		<i class="icon-facebook"></i> F
+				    		<a href="http://www.facebook.com">@{{ Person.[@additional].facebook }}</a>
+				    	</div>
+				    	<div class="social-links__link">
+				    		<i class="icon-twitter"></i> T
+				    		<a href="http://www.twitter.com">@{{ Person.[@additional].twitter }}</a>
+				    	</div>
+				    	<div class="social-links__link">
+				    		<i class="icon-phone"></i> P
+				    		<a href="tel:{{ Person.telephone }}" class="person__telephone" itemprop="telephone">{{ Person.telephone }}</a>
+				    	</div>
+				    	<div class="social-links__link">
+				    		<i class="icon-email"></i> E
+				    		<a href="mailto:{{ Person.email }}" class="person__email" itemprop="email">{{ Person.email }}</a>
+				    	</div>
+				    </div>
+				    <div class="ui__bookmark">
+				    	<i class="icon-bookmark"></i>
+				    	{{ Person.name }}'s home page:
+				    	<a href="http://www.{{ Person.url }}" class="person__url" itemprop="url">{{ Person.url }}</a>
+				    </div>
+			    </div>
+			</div>
+		</div>
 	</body>
 </html>

@@ -4,7 +4,7 @@
  * Site-wide mixins and functions.
  */
 @import "bower_components/bourbon/dist/_bourbon";
-@import "bower_components/neat/app/assets/stylesheets/_neat";
+@import "bower_components/susy/sass/_susy.scss";
 @import "tools/_mixer";
 
 /**
@@ -35,6 +35,8 @@
  *
  * Objects, abstractions, and design patterns (e.g. .media {}).
  */
+@import "objects/_person.scss";
+@import "objects/_postal_address.scss";
 
 /**
  * Components

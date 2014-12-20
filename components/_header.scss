@@ -1,31 +1,85 @@
-.header
-{
-  @include outer-container;
-  .header__item
-  {
-    @include span-columns(1 of 3, block-collapse);
+.content {
+  // Block
+  $grid: (
+    gutters: 0,
+    columns: 3
+  );
+  @include layout($grid);
+  @include container();
+
+  // Element unique rules
+  &__item {
+    @include span(1);
+  }
+  &__item:nth-child(1) {
+    color: $primary-color__bright--darkest;
+    background: linear-gradient($secondary-color__dim--light, $denary-color__dim--light);
+    border: 5px solid $denary-color__dim--lightest;
+  }
+  &__item:nth-child(2) {
+    color: $quaternary-color__bright--darker;
+    background-color: $quinary-color__dim--light;
+    border: 5px solid $senary-color-color__dim--light;
+  }
+  &__item:nth-child(3) {
+    color: $septenary-color__bright--dark;
+    background-color: $octonary-color__dim--light;
+    border: 5px solid $nonary-color__dim--light;
   }
 }
 
-.header__item:nth-child(1)
-{
-  color: $primary-color__bright--darkest;
-  background-color: $secondary-color__dim--light;
-  border: 5px solid $tertiary-color__dim--light;
+.ui {
+  // Block
+  $grid: (
+    gutter-position: inside,
+    gutters: 1/16,
+    columns: 2
+  );
+  @include layout($grid);
+  @include container();
+
+  // Element shared rules
+  &__overview, &__bookmark {
+    @include span(2);
+  }
+  &__description, &__links {
+    @include span(1);
+  }
+
+  // Element unique rules
+  &__description {
+    color: $denary-color__dim--lightest;
+  }
+  &__links {
+    border-left: 2px solid $tertiary-color__dim--darkest;
+  }
+  &__bookmark {
+    text-align: center;
+  }
 }
-.header__item:nth-child(2)
-{
-  color: $quaternary-color__bright--darker;
-  background-color: $quinary-color__dim--light;
-  border: 5px solid $senary-color-color__dim--light;
+
+.ui__overview {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $tertiary-color__bright--light;
+  .overview__main {
+    float: right;
+    color: $tertiary-color__bright--light;
+  }
 }
-.header__item:nth-child(3)
-{
-  color: $septenary-color__bright--dark;
-  background-color: $octonary-color__dim--light;
-  border: 5px solid $nonary-color__dim--light;
-}
-body
-{
-  background-color: $denary-color__dim--light;
+
+.social-links {
+  // Block
+  $grid: (
+    gutters: 0,
+    columns: 2
+  );
+  @include layout($grid);
+  @include container();
+
+  // Element unique rules
+  &__link {
+    @include span(1);
+    font-size: 0.5em;
+  }
 }
