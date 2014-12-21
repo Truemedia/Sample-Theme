@@ -1,4 +1,4 @@
-.content {
+.nav {
   // Block
   $grid: (
     gutters: 0,
@@ -11,17 +11,17 @@
   &__item {
     @include span(1);
   }
-  &__item:nth-child(1) {
+  &__item--primary {
     color: $primary-color__bright--darkest;
     background: linear-gradient($secondary-color__dim--light, $denary-color__dim--light);
     border: 5px solid $denary-color__dim--lightest;
   }
-  &__item:nth-child(2) {
+  &__item:--secondary {
     color: $quaternary-color__bright--darker;
     background-color: $quinary-color__dim--light;
     border: 5px solid $senary-color-color__dim--light;
   }
-  &__item:nth-child(3) {
+  &__item--tertiary {
     color: $septenary-color__bright--dark;
     background-color: $octonary-color__dim--light;
     border: 5px solid $nonary-color__dim--light;
