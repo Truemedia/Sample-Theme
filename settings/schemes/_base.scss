@@ -1,9 +1,9 @@
 /**
  * Color Scheme
  *
- * This is how your colors should be implemented in rest of application, to allow abstraction on hierachy rather than values
+ * This is how your colors should be implemented in rest of application, to allow abstraction on hierachy rather than color names
  */
-@import "_palette.scss";
+@import "./../palettes/_base.scss";
 
 $base-color-scheme:
 (

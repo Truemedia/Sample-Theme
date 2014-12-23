@@ -13,8 +13,8 @@
  * Global variables, site-wide settings, config switches, etc.
  */
 @import "bower_components/inuit-defaults/_settings.defaults";
-@import "settings/_scheme";
-@import "settings/_colors";
+@import "settings/schemes/_base";
+@import "settings/colors/_base";
 
 /**
  * Generic
