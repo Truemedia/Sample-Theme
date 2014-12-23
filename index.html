@@ -23,10 +23,10 @@
 		<title>Sample Theme</title>
 	</head>
 
-	<body id="layout">
-		<!-- Header -->
+	<body id="layout" itemscope itemtype="http://schema.org/WebPage">
 		<header class="header">
 			<nav class="nav">
+				<!-- Primary -->
 				<div class="nav__item nav__item--primary">
 					<div class="person ui" itemscope itemtype="http://schema.org/Person">
 						<div class="ui__overview">
@@ -64,6 +64,15 @@
 					    	<a href="http://www.{{ Person.url }}" class="person__url" itemprop="url">{{ Person.url }}</a>
 					    </div>
 				    </div>
+				</div>
+
+				<!-- Secondary -->
+				<div class="nav__item nav__item--secondary">
+					<div class="quick-links">
+						{{#each Person.links}}
+						<a href="{{ url }}" class="quick-links__link">{{ text }}</a>
+						{{/each}}
+					</div>
 				</div>
 			</nav>
 		</header>

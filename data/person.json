@@ -12,5 +12,23 @@
     "bio": "Here is some random info I decided to write about myself that mite be interesting",
     "facebook": "NotARealFacebook",
     "twitter": "NotARealTwitter"
-  }
+  },
+  "links": [
+    {
+      "text": "About",
+      "url": "#"
+    },
+    {
+      "text": "Web dev stuff",
+      "url": "#"
+    },
+    {
+      "text": "Music things",
+      "url": "#"
+    },
+    {
+      "text": "Vids/Tuts",
+      "url": "#"
+    }
+  ]
 }
